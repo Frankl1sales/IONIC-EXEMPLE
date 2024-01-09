@@ -1,0 +1,7 @@
+<app-header [pageTitle]="pageTitle || 'Página de alerta'"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button name="alert" color="tertiary" expand="block" (click)="presentAlert()">Chamar alerta</ion-button>
+  <ion-button name="input" color="warning" expand="block" (click)="presentAlertPrompt()">Chamar input</ion-button>
+  <ion-badge>12</ion-badge>
+  </ion-content>

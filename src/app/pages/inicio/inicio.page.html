@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <!-- <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>   -->
+      <ion-menu-button name="principal"></ion-menu-button>
+      <ion-title>Início</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Início</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let item of componentes" [routerLink]="item.link" detail>
+      <ion-icon [name]="item.icon" aria-hidden="true" size="large" slot="start" />
+      <ion-label>
+          <h1>{{item.name}}</h1>
+          <p>{{item.subtitle}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="secondary" expand="full" routerLink="/alert">alert</ion-button>
+  <ion-button color="danger" expand="block" routerLink="/action-sheet">action-sheet</ion-button>
+  <ion-button color="tertiary" expand="block" routerLink="/cards">Cards</ion-button>
+  <ion-button color="primary" expand="block" routerLink="/datas">Datas</ion-button>
+</ion-content>

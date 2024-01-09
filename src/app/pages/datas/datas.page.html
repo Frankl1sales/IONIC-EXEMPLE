@@ -1,0 +1,12 @@
+<app-header pageTitle="Página das datas"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-datetime
+  min="1900-01-01T00:00:00"
+  max="2100-12-31T23:59:59"
+  placeholder="Data"
+  cancelText="Cancelar"
+  [ngModel]="dt.toISOString()">
+  (ionChange)="trocarData($event)"
+  </ion-datetime>
+</ion-content>
