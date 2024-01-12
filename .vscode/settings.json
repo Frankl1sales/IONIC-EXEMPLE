@@ -1,9 +1,3 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "@ionic/angular/common",
-    "@ionic/angular/standalone"
-  ],
-  "files.associations": {
-    "string.h": "c"
-  }
+  "typescript.preferences.autoImportFileExcludePatterns": ["@ionic/angular/common", "@ionic/angular/standalone"]
 }

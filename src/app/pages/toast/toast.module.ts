@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
+import { ToastPageRoutingModule } from './toast-routing.module';
 
-import { InicioPage } from './inicio.page';
+import { ToastPage } from './toast.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
+    ToastPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [InicioPage],
+  declarations: [ToastPage]
 })
-export class InicioPageModule {}
+export class ToastPageModule {}

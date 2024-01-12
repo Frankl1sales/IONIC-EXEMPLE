@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,10 +15,12 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     CommonModule,
     IonicModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    
   ]
 })
 export class ComponentsModule { }

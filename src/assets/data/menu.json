@@ -1,0 +1,50 @@
+[
+    {
+    "icon": "alert-circle-outline",
+    "name": "Alerta",
+    "subtitle": "Página de alerta",
+    "link": "/alert"
+    },
+    {
+    "icon": "list-outline",
+    "name": "Action sheet",
+    "subtitle": "Página do action sheet",
+    "link": "/action-sheet"
+    },
+    {
+    "icon": "albums-outline",
+    "name": "Cards",
+    "subtitle": "Página dos cards",
+    "link": "/cards"
+    },
+    {
+    "icon": "calendar-outline",
+    "name": "Datas",
+    "subtitle": "Página de datas",
+    "link": "/datas"
+    },
+    {
+    "icon": "grid-outline",
+    "name": "Tabelas",
+    "subtitle": "Página de tabelas",
+    "link": "/grids"
+    },
+    {
+    "icon": "hardware-chip-outline",
+    "name": "Inputs",
+    "subtitle": "Página de inputs",
+    "link": "/inputs"
+    },
+    {
+    "icon": "chatbox-ellipses-outline",
+    "name": "Toast",
+    "subtitle": "Página do toast",
+    "link": "/toast"
+    },
+    {
+    "icon": "code-outline",
+    "name": "Slide",
+    "subtitle": "Página de slide",
+    "link": "/slide"
+    }
+]

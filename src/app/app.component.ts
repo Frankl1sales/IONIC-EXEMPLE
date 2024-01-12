@@ -1,5 +1,7 @@
 import { Component, Optional, ViewChild } from '@angular/core';
-import { App } from '@capacitor/app';
+import { register } from 'swiper/element/bundle'
+
+register();
 
 @Component({
   selector: 'app-root',

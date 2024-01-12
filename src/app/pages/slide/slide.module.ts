@@ -4,19 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
+import { SlidePageRoutingModule } from './slide-routing.module';
 
-import { InicioPage } from './inicio.page';
+import { SlidePage } from './slide.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
+    SlidePageRoutingModule,
     ComponentsModule
   ],
-  declarations: [InicioPage],
+  declarations: [SlidePage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class InicioPageModule {}
+export class SlidePageModule {}

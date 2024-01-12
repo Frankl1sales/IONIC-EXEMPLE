@@ -1,0 +1,8 @@
+<app-header pageTitle="Página do toast"></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-button color="secondary" expand="full" (click)="presentToast('bottom')">Mostrar toast</ion-button>
+    <ion-button color="primary" expand="full" (click)="presentToastWithOptions()">Mostrar toast com opções</ion-button>
+  </div>
+</ion-content>
