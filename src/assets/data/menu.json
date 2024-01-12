@@ -46,5 +46,11 @@
     "name": "Slide",
     "subtitle": "Página de slide",
     "link": "/slide"
+    },
+    {
+    "icon": "code-slash-outline",
+    "name": "Licenças",
+    "subtitle": "Página das licenças",
+    "link": "/licenses"
     }
 ]

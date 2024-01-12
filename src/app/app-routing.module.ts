@@ -50,7 +50,11 @@ const routes: Routes = [
   {
     path: 'slide',
     loadChildren: () => import('./pages/slide/slide.module').then( m => m.SlidePageModule)
+  },  {
+    path: 'licenses',
+    loadChildren: () => import('./pages/real-app-teste-pages/licenses/licenses.module').then( m => m.LicensesPageModule)
   },
+
 ];
 
 @NgModule({
