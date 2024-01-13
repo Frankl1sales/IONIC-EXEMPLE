@@ -1,20 +1,25 @@
 <app-header pageTitle="Licenças open source"></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-accordion-group>
-    <ion-accordion *ngFor="let project of projects" [value]="project.internalName">
-      <ion-item slot="header" color="light">
-        <ion-fab-button *ngIf="project.url != undefined && project.url != ''" slot="end" (click)="linkButtonClick($event, project.url)">
-          <ion-icon name="link-outline" size="large" style="rotate: -45deg; width: 60%; height: 60%"></ion-icon>
-        </ion-fab-button>
-        <ion-label>
-          <h1>{{project.friendlyName}}</h1>
-          <h2>{{project.licenseFriendlyName}}</h2>
-        </ion-label>
-      </ion-item>
-      <div slot="content">
-        <embed [src]="getSafeLicenseUrl(project.internalName)" type="text/plain" class="license-text">
-      </div>
-    </ion-accordion>
+  <ion-accordion-group class="ion-padding">
+    <ion-card>
+      <ion-accordion *ngFor="let project of projects" [value]="project.internalName">
+        <ion-item slot="header" color="light">
+          <ion-icon
+          name="link-outline"
+          *ngIf="project.url != undefined && project.url != ''"
+          slot="end" (click)="linkButtonClick($event, project.url)"
+          style="rotate: -40deg"
+          aria-hidden="true" />
+          <ion-label>
+            <h1>{{project.friendlyName}}</h1>
+            <h2 style="color: var(--ion-color-medium-shade);">{{project.licenseFriendlyName}}</h2>
+          </ion-label>
+        </ion-item>
+        <div slot="content">
+          <embed [src]="getSafeLicenseUrl(project.internalName)" type="text/plain" class="license-text">
+        </div>
+      </ion-accordion>
+    </ion-card>
   </ion-accordion-group>
 </ion-content>
