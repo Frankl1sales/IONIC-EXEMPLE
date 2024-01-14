@@ -18,12 +18,10 @@
             <h2 style="color: var(--ion-color-medium-shade);">{{license.licenseFriendlyName}}</h2>
           </ion-label>
         </ion-item>
-        <!-- <embed slot="content" [src]="getSafeLicenseUrl(licensesObject.internalName)" type="text/plain" class="license-text"> -->
         <div slot="content">
           <div class="license-text ion-padding">
             <p *ngFor="let line of license.text">{{line}}</p>
           </div>
-          <div class="license-text-fading"></div>
         </div>
       </ion-accordion>
   </ion-accordion-group>

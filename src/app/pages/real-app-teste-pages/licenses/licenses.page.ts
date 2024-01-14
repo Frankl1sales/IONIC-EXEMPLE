@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 
 import { Browser } from '@capacitor/browser';
 
@@ -14,15 +13,10 @@ export class LicensesPage implements OnInit {
 
   protected licensesObject: any;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor() { }
 
   ngOnInit() {
     this.licensesObject = licenses;
-  }
-
-  protected getSafeLicenseUrl(fileName: string) {
-    const url = '/assets/licenses/' + fileName + '.txt';
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
   protected linkButtonClick(event: Event, url: string) {
@@ -36,15 +30,3 @@ export class LicensesPage implements OnInit {
   };
 
 }
-
-/**
- * Project interface
- * 
- * This interface defines the parameters each licensed project should have.
-
- * @param {string} friendlyName - Project's friendly user-facing name
- * @param {string} internalName - Project's internal name of the project: no spaces or special characters
- * @param {string} licenseFriendlyName - Friendly name of the project license, user-facing
- * @param {string} licenseSPDX - The SPDX name of the license (https://spdx.org/licenses/)
- * @param {string?} url - URL to the project home page (optional)
-**/
