@@ -3,6 +3,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { Browser } from '@capacitor/browser';
 
+import licenses from 'src/assets/data/licenses.json'
+
 @Component({
   selector: 'app-licenses',
   templateUrl: './licenses.page.html',
@@ -10,33 +12,12 @@ import { Browser } from '@capacitor/browser';
 })
 export class LicensesPage implements OnInit {
 
-  protected projects: Project[] = [
-    {
-      friendlyName: "Angular",
-      internalName: "angular",
-      licenseFriendlyName: "MIT License",
-      licenseSPDX: "MIT",
-      url: "https://angular.dev/"
-    },
-    {
-      friendlyName: "Capacitor",
-      internalName: "capacitor",
-      licenseFriendlyName: "MIT License",
-      licenseSPDX: "MIT",
-      url: "https://capacitorjs.com/"
-    },
-    {
-      friendlyName: "Ionic Framework",
-      internalName: "ionic",
-      licenseFriendlyName: "MIT License",
-      licenseSPDX: "MIT",
-      url: "https://ionicframework.com/"
-    }
-  ]
+  protected licensesObject: any;
 
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+    this.licensesObject = licenses;
   }
 
   protected getSafeLicenseUrl(fileName: string) {
@@ -67,10 +48,3 @@ export class LicensesPage implements OnInit {
  * @param {string} licenseSPDX - The SPDX name of the license (https://spdx.org/licenses/)
  * @param {string?} url - URL to the project home page (optional)
 **/
-interface Project {
-  friendlyName: string,
-  internalName: string,
-  licenseFriendlyName: string,
-  licenseSPDX: string,
-  url?: string
-}

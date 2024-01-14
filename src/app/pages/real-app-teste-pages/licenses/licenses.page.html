@@ -2,23 +2,29 @@
 
 <ion-content [fullscreen]="true">
   <ion-accordion-group class="ion-padding" expand="inset">
-      <ion-accordion *ngFor="let project of projects" [value]="project.internalName">
+      <ion-accordion *ngFor="let license of licensesObject" [value]="license.internalName">
         <ion-item slot="header" color="light" style="--ripple-color: transparent">
           <ion-button
           class="circular-button"
           color="dark"
           fill="clear"
           slot="end"
-          (click)="linkButtonClick($event, project.url)"
-          *ngIf="project.url != undefined && project.url != ''">
+          (click)="linkButtonClick($event,license.url)"
+          *ngIf="license.url != undefined &&license.url != ''">
             <ion-icon name="link-outline" size="large" style="rotate: -45deg" aria-hidden="true"></ion-icon>
         </ion-button>
           <ion-label>
-            <h1>{{project.friendlyName}}</h1>
-            <h2 style="color: var(--ion-color-medium-shade);">{{project.licenseFriendlyName}}</h2>
+            <h1>{{license.friendlyName}}</h1>
+            <h2 style="color: var(--ion-color-medium-shade);">{{license.licenseFriendlyName}}</h2>
           </ion-label>
         </ion-item>
-        <embed slot="content" [src]="getSafeLicenseUrl(project.internalName)" type="text/plain" class="license-text">
+        <!-- <embed slot="content" [src]="getSafeLicenseUrl(licensesObject.internalName)" type="text/plain" class="license-text"> -->
+        <div slot="content">
+          <div class="license-text ion-padding">
+            <p *ngFor="let line of license.text">{{line}}</p>
+          </div>
+          <div class="license-text-fading"></div>
+        </div>
       </ion-accordion>
   </ion-accordion-group>
 </ion-content>
